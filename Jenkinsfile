@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('scm') {
             steps {
-                git branch:'master',url:'https://github.com/shreyadey16/sample4.git'
+                git branch:'master',url:'https://github.com/shreyadey16/MavAppRepo.git'
             }
         }
         stage('Build') {
