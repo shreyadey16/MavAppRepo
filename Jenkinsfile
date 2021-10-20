@@ -17,5 +17,15 @@ pipeline {
                 sh ' mvn clean package'
             }
         }
+      stage('SonarQube Analysis'){
+            steps{
+                script{
+                    withSonarQubeEnv('sonar'){
+                        sh 'ls'
+                        sh 'mvn sonar:sonar -DskipTests'
+                    }
+                }
+            }
+        }
     }
 }
