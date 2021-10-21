@@ -44,12 +44,6 @@ pipeline {
                 } 
             }
          }
-      stage('deploy'){
-          steps{
-              sshagent(['deploy_user1']) {
-                sh "scp -o StrictHostKeyChecking=no /home/jenkins/agent/workspace/shreya-training/mav_app_pipe/target/MavApp.war ec2-user@3.235.11.169:/opt/apache-tomcat-8.5.71/webapps"
-              }
-          }
-      }
+      
     }
 }
